@@ -1,0 +1,58 @@
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Livvic', sans-serif;
+    line-height: 1.618;
+}
+
+[class*="wrap-"] {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@each $key, $var in $colors {
+    
+    .#{$key} {
+        color: #{$var};
+    }
+    
+    .bg-#{$key} {
+        background-color: #{$var};
+    }
+}
+
+@each $key, $var in $wrappers {
+    
+    .#{$key} {
+        max-width: #{$var};
+    }
+}
+
+@each $key, $var in $typography {
+    
+    .#{$key} {
+        font-size: #{$var};
+    }
+}
+
+.text-ac {
+    text-align: center;
+}
+.text-ar {
+    text-align: right;
+}
+
+.text-uc {
+    text-transform: uppercase;
+    word-spacing: toRem(4px);
+    letter-spacing: toRem(2px);
+}

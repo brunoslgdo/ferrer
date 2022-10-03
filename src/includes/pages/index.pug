@@ -1,0 +1,36 @@
+extend ../templates/main
+block content
+
+    main
+
+        section.bg-default.hero-banner
+            article.wrap-sm
+                h1.blanco.t1.animate__animated.animate__fadeInUp “Hechos para hacerte crecer”
+                .animate__animated.animate__fadeInUp
+                    a(href="#" rel="noopener" target="_blank" class="boton boton--ghost") Análisis
+
+        section.bg-default.videos
+            article.wrap-xs.videos__wrap
+                .videos__item
+                    img(src=`${pathImg}thumb-video.png` alt="Miniatura videos")
+                .videos__item
+                    h2.azul.t4 Ferrer & Asociados
+                    h3.rojo.t5 Procesos
+                    p.blanco.t6 En Ferrer y Asociados estamos hechos para hacerte crecer, conoce nuestros servicios de consultoría de procesos de negocio, un diagnóstico hace la diferencia y te lleva a ser preventivo. <a href="servicios-y-soluciones.html" rel="noopener" class="blanco"><strong class="blanco">Conóce más</strong></a>
+
+        .section
+            include ../components/mosaico_clientes
+        
+        //- section.opinion
+        //-     article.wrap-sm
+        //-         h2.negro.t3.text-ac ¿Qué opinan nuestros clientes?
+        //-         ul.lista-opinion
+        //-             li.t6.bg-blanco
+        //-                 img(src=`${pathImg}testimonio-persona-1.png`, alt="Foto cliente testimonio")
+        //-                 p.negro.t6 Pellentesque tristique, diam ac blandit congue, mi purus aliquet lectus, sed eleifend urna nulla eu metus. Nulla libero turpis, luctus et laoreet sit amet, rutrum eu est. Pellentesque nec auctor felis, ac aliquet leo.<br><br>Pellentesque tristique<br><span class="azul">Pellentesque tristique diam ac</span>
+        //-             li.t6.bg-blanco
+        //-                 img(src=`${pathImg}testimonio-persona-2.png`, alt="Foto cliente testimonio")
+        //-                 p.negro.t6 Pellentesque tristique, diam ac blandit congue, mi purus aliquet lectus, sed eleifend urna nulla eu metus. Nulla libero turpis, luctus et laoreet sit amet, rutrum eu est. Pellentesque nec auctor felis, ac aliquet leo.<br><br>Pellentesque tristique<br><span class="azul">Pellentesque tristique diam ac</span>
+        //-             li.t6.bg-blanco
+        //-                 img(src=`${pathImg}testimonio-persona-3.png`, alt="Foto cliente testimonio")
+        //-                 p.negro.t6 Pellentesque tristique, diam ac blandit congue, mi purus aliquet lectus, sed eleifend urna nulla eu metus. Nulla libero turpis, luctus et laoreet sit amet, rutrum eu est. Pellentesque nec auctor felis, ac aliquet leo.<br><br>Pellentesque tristique<br><span class="azul">Pellentesque tristique diam ac</span>

@@ -1,0 +1,20 @@
+.mosaico-clientes {
+    background-color: var(--blanco);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--su-48);
+    list-style: none;
+    padding: var(--su-48) var(--su-24);
+    border-radius: var(--su-16);
+
+    img {
+        display:  block;
+        max-width: toRem(120px);
+        
+        @media only screen and (min-width: 1024px) {
+            max-width: toRem(140px);
+        }
+    }
+}

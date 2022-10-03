@@ -1,0 +1,52 @@
+-
+    const CLIENTES = [
+        {
+            logo: 'logo-presta-prenda.png',
+            logoAlt: 'Presta prenda',
+            logoUrl: '',
+        },
+        {
+            logo: 'logo-total-play.png',
+            logoAlt: 'Total play',
+            logoUrl: '',
+        },
+        {
+            logo: 'logo-tv-azteca.png',
+            logoAlt: 'Tv azteca',
+            logoUrl: '',
+        },
+        {
+            logo: 'logo-italika.png',
+            logoAlt: 'Italika',
+            logoUrl: '',
+        },
+        {
+            logo: 'logo-grupo-dragon.png',
+            logoAlt: 'Grupo dragón',
+            logoUrl: '',
+        },
+        {
+            logo: 'logo-circulo-de-credito.png',
+            logoAlt: 'Círculo de crédito',
+            logoUrl: '',
+        },
+        {
+            logo: 'logo-fundacion-azteca.png',
+            logoAlt: 'Fundación azteca de grupo salinas',
+            logoUrl: '',
+        },
+        {
+            logo: 'logo-pe.png',
+            logoAlt: 'Pe',
+            logoUrl: '',
+        },
+        {
+            logo: 'logo-banco-azteca.png',
+            logoAlt: 'Banco azteca',
+            logoUrl: '',
+        },
+    ]
+
+ul.mosaico-clientes.wrap-sm
+    each item in CLIENTES
+        li.animate__animated.animate__fadeInUp: img(src=`${pathImg}${item.logo}` alt=`${item.logoAlt}`)

@@ -1,0 +1,401 @@
+// SECTORES
+
+.sectores {
+
+    h3 {
+        margin-top: var(--su-48);
+        font-weight: 300;
+    }
+}
+
+.lista-sectores {
+    list-style: none;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    
+    @media only screen and (min-width: 568px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media only screen and (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media only screen and (min-width: 1048px) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    li {
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        > p {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            line-height: 1.125;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            display: none;
+            background-color: var(--rojo);
+            opacity: .72;
+            width: 100%;
+            height: 100%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:hover > p {      
+            display: flex;
+        }
+    } 
+
+    img {
+        display: block;
+        max-width: toRem(420px);
+        width: 100%;
+    }
+}
+
+// CLIENTES
+
+.clientes {
+
+    .wrap-lg {
+        background-color: var(--blanco);
+        border-radius: var(--su-64);
+        padding: var(--su-64);
+    }
+}
+
+// QUIÉNES SOMOS
+
+.nosotros {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    gap: var(--su-32);
+    
+    @media only screen and (min-width: 1024px) {
+        grid-template-columns: repeat(2, auto);
+        gap: var(--su-32);
+    }
+    
+    &__item:first-child {
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            padding-bottom: 100%; 
+        }
+
+        @media only screen and (min-width: 1024px) {
+            & {
+                display: initial;
+            }
+
+            &::after {
+                content: '';
+                display: initial;
+                padding-bottom: initial;
+            }
+        }
+    }
+
+    &__item:last-child {
+        padding-right: var(--su-16);
+        padding-left: var(--su-16);
+    }
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @media only screen and (min-width: 1024px) {
+            position: relative;
+        }
+    }
+}
+
+.valores {
+    padding-top: var(--su-64);
+    padding-bottom: var(--su-64);
+
+    .t6 {
+        margin-bottom: calc(var(--t6) * 3);
+    }
+}
+
+.lista-valores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    text-align: center;
+    list-style: none;
+
+    img {
+        height: var(--su-80);
+        width: auto;
+        padding: var(--su-8);
+    }
+}
+
+.liderazgo {
+    background: url('../img/bg-liderazgo.png');
+    padding-top: var(--su-80);
+    padding-bottom: var(--su-80);
+
+    .wrap-xs {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(2, auto);
+        gap: var(--su-32);
+    
+    }
+
+    h2 {
+        margin-bottom: var(--su-32);
+    }
+
+    p {
+        padding-right: var(--su-16);
+        padding-left: var(--su-16);
+    }
+
+    img {
+        width: toRem(180px);
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+// PROCESOS / SERVICIOS Y SOLUCIONES
+
+.procesos {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    gap: var(--su-32);
+    
+    @media only screen and (min-width: 1024px) {
+        grid-template-columns: repeat(12, auto);
+        gap: var(--su-32);
+    }
+    
+    &__item:first-child {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            padding-bottom: 100%; 
+        }
+
+        @media only screen and (min-width: 1024px) {
+            & {
+                display: initial;
+                grid-column: 1 / span 5;
+            }
+
+            &::after {
+                content: '';
+                display: initial;
+                padding-bottom: initial;
+            }
+        }
+    }
+
+    &__item:last-child {
+        padding-right: var(--su-16);
+        padding-left: var(--su-16);
+    }
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        @media only screen and (min-width: 1024px) {
+            position: relative;
+        }
+    }
+}
+
+.servicios-soluciones {
+    padding-bottom: var(--su-96);
+}
+
+.lista-consultoria {
+    list-style-type: none;
+    display: flex;
+    gap: var(--su-16);
+    padding-bottom: toRem(160px);
+
+    &__item {
+        border: toRem(1px) solid var(--blanco);
+        border-radius: var(--su-8);
+        padding: var(--su-24);
+        margin-bottom: var(--su-32);
+        flex: 1;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            content: '▼';
+            color: var(--blanco);
+            font-size: var(--su-32);
+            position: absolute;
+            left: 50%;
+            bottom: toRem(-36px);
+            transform-origin: top;
+            transform: scale(0) translateX(-50%);
+        }
+
+        // cinco
+        &:nth-child(1) .lista-consultoria__servicios.cinco { 
+            min-width: 500%;
+             
+        }
+        &:nth-child(2) .lista-consultoria__servicios.cinco { 
+            left: -100%;
+            min-width: 500%;
+        }
+        &:nth-child(3) .lista-consultoria__servicios.cinco { 
+            left: -200%;
+            min-width: 500%;
+            
+        }
+        &:nth-child(4) .lista-consultoria__servicios.cinco { 
+            left: -300%;
+            min-width: 500%;
+             
+        }
+        &:nth-child(5) .lista-consultoria__servicios.cinco { 
+            left: -400%;
+            min-width: 500%;
+        }
+        
+        // cuatro
+        &:nth-child(1) .lista-consultoria__servicios.cuatro { 
+            min-width: 400%;
+             
+        }
+        &:nth-child(2) .lista-consultoria__servicios.cuatro { 
+            left: -100%;
+            min-width: 400%;
+        }
+        &:nth-child(3) .lista-consultoria__servicios.cuatro { 
+            left: -200%;
+            min-width: 400%;
+            
+        }
+        &:nth-child(4) .lista-consultoria__servicios.cuatro { 
+            left: -300%;
+            min-width: 400%;
+             
+        }
+
+        &:hover {
+            background-color: var(--blanco);
+
+            .blanco {
+                color: var(--default);
+            }
+
+            .lista-consultoria__separador {
+                background-color: var(--default);
+            }
+
+            .lista-consultoria__servicios {
+                transform: scaleY(1);
+            }
+
+            &::after {
+                transform: scale(1) translateX(-50%);
+            }
+        }
+    }
+
+    &__separador {
+        background-color: var(--blanco);
+        border-style: none;
+        height: toRem(1px);
+        max-width: var(--su-64);
+        margin: var(--su-16) auto;
+    }
+
+    &__servicios {
+        background-color: var(--blanco);
+        border-radius: var(--su-16);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--su-32);
+        
+        padding: var(--su-32);
+        
+        position: absolute;
+        top: calc(100% + var(--su-32));
+        left: toRem(0px);
+        
+        min-width: toRem(1024px);
+
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+}
+
+// SLIDER
+
+.mySlides {
+    display: none;
+}
+
+.slideshow-container {
+    // max-width: 1000px;
+    // margin: auto;
+    position: relative;
+}
+
+.dots {
+    position: absolute;
+    top: toRem(320px);
+    right: var(--su-80);
+}
+
+.dot {
+    cursor: pointer;
+    height: var(--su-16);
+    width: var(--su-16);
+    margin-right: var(--su-4);
+    margin-left: var(--su-4);
+    background-color: var(--default);
+    border: toRem(1px) solid var(--blanco);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: var(--blanco);
+}

@@ -1,0 +1,14 @@
+$wrappers: (
+    wrap-xl: toRem(1980px),
+    wrap-lg: toRem(1366px),
+    wrap-md: toRem(1280px),
+    wrap-sm: toRem(1024px),
+    wrap-xs: toRem(768px)
+);
+
+:root {
+
+    @each $key, $var in $wrappers {
+        --#{$key}: #{$var};
+    }
+}

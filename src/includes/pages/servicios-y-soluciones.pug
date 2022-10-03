@@ -1,0 +1,170 @@
+extend ../templates/main
+block content
+
+    section.bg-default.subheader
+        article.wrap-sm
+            h1.blanco.t1.text-ac.animate__animated.animate__fadeInUp Servicios y soluciones
+
+    -
+        const CONSULTORIA_PROCESOS = [
+            {
+                itemTitulo: 'Arquitectura',
+                itemDescripcion: 'Definición  y ordenamiento de la operación de un negocio  mediante la estructura y representación de todos los niveles de procesos',
+                itemServicios: [
+                    'Caso de negocio',
+                    'Cadena de valor',
+                    'Mapa de procesos',
+                    'Manual de políticas',
+                    'Manuales de procedimientos',
+                    'Matriz de roles y responsabilidades',
+                    'Acuerdos de niveles de servicio',
+                ],
+            },
+            {
+                itemTitulo: 'Análisis',
+                itemDescripcion: 'Entendimiento claro de la operación de negocio del cliente, detectando  áreas de oportunidad que sean presentadas mediante un diagnóstico y plan de acción.',
+                itemServicios: [
+                    'Diagnóstico',
+                    'Plan de acción',
+                ],
+            },
+            {
+                itemTitulo: 'Diseño',
+                itemDescripcion: 'Propuestas  disruptivas de nuevos procesos o modificaciones a procesos existentes (propuesta “To Be” del proceso) y un plan de acción para su aplicación.',
+                itemServicios: [
+                    'Propuesta de procesos To Be',
+                    'Manuales de políticas y procedimientos To Be',
+                    'Matriz de riesgos y controles',
+                    'Matriz de roles y responsabilidades To Be',
+                    'Tableros de indicadores y métricas',
+                    'Mapas de sistemas utilizados',
+                ],
+            },
+            {
+                itemTitulo: 'Transformación',
+                itemDescripcion: 'Consultoría digital en los procesos de una empresa y puede estar representada mediante una automatización, digitalización, robotización entre otras soluciones.',
+                itemServicios: [
+                    'Plan de acción',
+                    'Administración ágil',
+                    'Uso de otras soluciones TI',
+                    'Comunicación asertiva',
+                ],
+            },
+            {
+                itemTitulo: 'Mejora Continua',
+                itemDescripcion: 'Replanteamiento de una nueva iniciativa del proceso partiendo de una propuesta “To Be”ya implementada.',
+                itemServicios: [
+                    'Plan de revisiones del proceso',
+                    'Informe',
+                    'Plan de acción',
+                    'Comunicación asertiva',
+                ],
+            },
+        ]
+
+        const CONSULTORIA_PREVEENCION = [
+            {
+                itemTitulo: 'Implementar área AI',
+                itemDescripcion: 'Creamos dentro de tu empresa equipos especializados en auditoría enfocada en la prevención.',
+                itemServicios: [
+                    'Implementar Área AI',
+                    'Controles y Procesos',
+                    'Control de Inventario',
+                    'Proyectos Especiales',
+                    'Nomativa (Banca)',
+                    'Construcción y Mantenimiento',
+                    'Forense',
+                    'Redes Sociales',
+                ],
+            },
+            {
+                itemTitulo: 'Controles y procesos',
+                itemDescripcion: 'Validamos efectividad de  controles y cumplimiento de procesos y políticas.',
+                itemServicios: [],
+            },
+            {
+                itemTitulo: 'Control de inventarios',
+                itemDescripcion: 'Realizamos levantamiento de inventarios físicos en todo el país, analizando la gestión operativa de las existencias.',
+                itemServicios: [],
+            },
+            {
+                itemTitulo: 'Proyectos especiales',
+                itemDescripcion: 'Ejecutamos revisiones con propósitos específicos de acuerdo a tus necesidades.',
+                itemServicios: [],
+            },
+            {
+                itemTitulo: 'Normativas (Banca)',
+                itemDescripcion: 'Replanteamiento de una nueva iniciativa del proceso partiendo de una propuesta “To Be”ya implementada.',
+                itemServicios: [],
+            },
+            {
+                itemTitulo: 'Forense',
+                itemDescripcion: 'Nos enfocamos al análisis forense digital, investigaciones dirigidas, así como capacitación y formación en técnicas de investigación forense.',
+                itemServicios: [],
+            },
+            {
+                itemTitulo: 'Redes Sociales',
+                itemDescripcion: 'Monitoreamos tus RRSS: respuesta oportuna, control de ataques a la reputación, atención de denuncias, etc.',
+                itemServicios: [],
+            },
+            {
+                itemTitulo: 'Atención línea ética',
+                itemDescripcion: 'Implementamos, administramos e investigamos las denuncias de la línea ética.',
+                itemServicios: [],
+            },
+        ]
+
+    section.bg-default.slideshow-container
+
+        //- CONSULTORPÍA DE PROCESOS
+        .mySlides.fade.animate__animated.animate__fadeInLeftBig
+            article.wrap-lg.procesos
+                .procesos__item
+                    img(src=`${pathImg}consultoria-de-procesos.png` alt="Consultoría de procesos")
+                .procesos__item
+                    h2.blanco.t3 Consultoría de Procesos
+                    p.blanco.t6 Estamos hechos para hacerte crecer mediante  el análisis, diseño y transformación de procesos de negocio.
+            article.wrap-lg.servicios-soluciones
+                ul.lista-consultoria
+                    each item in CONSULTORIA_PROCESOS
+                        li.lista-consultoria__item
+                            h3.blanco.t5.text-ac !{`${item.itemTitulo}`}
+                            hr.lista-consultoria__separador
+                            p.blanco.t6.text-ac !{`${item.itemDescripcion}`}
+                            .lista-consultoria__servicios.cinco
+                                each servicio in item.itemServicios
+                                    p.default.t6.text-ac !{`${servicio}`}
+
+        //- CONSULTORÍA DE PREVENCIÓN Y AUDITORÍA INTERNA
+        .mySlides.fade.animate__animated.animate__fadeInLeftBig
+            article.wrap-lg.procesos
+                .procesos__item
+                    img(src=`${pathImg}consultoria-de-prevencion-y-auditoria-interna.png` alt="Consultoría de procesos")
+                .procesos__item
+                    h2.blanco.t3 Consultoría de Prevención y Auditoría Interna
+                    p.blanco.t6 Cuidamos las operaciones de tu negocio para que tú te dediques a lo importante: crecer y ganar.
+            article.wrap-lg.servicios-soluciones
+                ul.lista-consultoria
+                    each item, key in CONSULTORIA_PREVEENCION
+                        if key < 4
+                            li.lista-consultoria__item
+                                h3.blanco.t5.text-ac !{`${item.itemTitulo}`}
+                                hr.lista-consultoria__separador
+                                p.blanco.t6.text-ac !{`${item.itemDescripcion}`}
+                                .lista-consultoria__servicios.cuatro
+                                    each servicio in item.itemServicios
+                                        p.default.t6.text-ac !{`${servicio}`}
+                ul.lista-consultoria
+                    each item, key in CONSULTORIA_PREVEENCION
+                        if key > 3
+                            li.lista-consultoria__item
+                                h3.blanco.t5.text-ac !{`${item.itemTitulo}`}
+                                hr.lista-consultoria__separador
+                                p.blanco.t6.text-ac !{`${item.itemDescripcion}`}
+                                .lista-consultoria__servicios.cuatro
+                                    each servicio in item.itemServicios
+                                        p.default.t6.text-ac !{`${servicio}`}
+        .dots
+            span(class="dot" onclick="currentSlide(1)") 
+            span(class="dot" onclick="currentSlide(2)") 
+            //- span(class="dot" onclick="currentSlide(3)") 

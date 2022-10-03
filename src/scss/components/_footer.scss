@@ -1,0 +1,19 @@
+.footer {
+    position: relative;
+    height: toRem(240px);
+
+    img {
+        position: absolute;
+    }
+    
+    img:first-child {
+        left: var(--su-80);
+        width: toRem(160px);
+    }
+    
+    img:last-child {
+        right: 0;
+        bottom: 0;
+        width: toRem(400px);
+    }
+}

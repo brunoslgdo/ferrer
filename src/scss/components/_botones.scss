@@ -1,0 +1,20 @@
+.boton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--su-64);
+    padding: var(--su-16) var(--su-40);
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: var(--t5);
+    line-height: 1;
+    word-spacing: toRem(2px);
+    letter-spacing: toRem(2px);
+    font-weight: 700;
+    
+    &--ghost {
+        color: var(--blanco);
+        border: toRem(2px) solid var(--blanco);
+        background-color: transparent;
+    }
+}

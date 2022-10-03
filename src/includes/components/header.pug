@@ -1,0 +1,11 @@
+header.header
+    navbar.wrap-xl
+        a(href="index.html" rel="noopener" target="_blank") 
+            img(src=`${pathImg}ferrer.png` class="animate__animated animate__fadeInUp" alt="Ferrer & Asociados")
+        .menu-icon
+            span.menu-icon__line
+            span.menu-icon__line
+            span.menu-icon__line
+        ul.menu-list
+            each item in MENU_ITEMS
+                li.animate__animated.animate__fadeInUp: a(href=`${item.itemUrl}` rel="nooeper") !{`${item.item}`}

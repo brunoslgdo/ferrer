@@ -1,0 +1,66 @@
+extend ../templates/main
+block content
+
+    section.bg-default.subheader
+        article.wrap-sm
+            h1.blanco.t1.text-ac.animate__animated.animate__fadeInUp ¿Quiénes somos?
+            //- p.blanco.t4.text-ac Tenemos amplia experiencia en los siguientes sectores:
+
+    -
+        const VALORES = [
+            {
+                icon: 'icon-honestidad.png',
+                iconAlt: 'Honestidad',
+                iconUrl: '',
+            },
+            {
+                icon: 'icon-pasion.png',
+                iconAlt: 'Pasión por el cliente',
+                iconUrl: '',
+            },
+            {
+                icon: 'icon-trabajo.png',
+                iconAlt: 'Trabajo en equipo',
+                iconUrl: '',
+            },
+            {
+                icon: 'icon-confianza.png',
+                iconAlt: 'Confianza y respeto',
+                iconUrl: '',
+            },
+            {
+                icon: 'icon-ejecucion.png',
+                iconAlt: 'Ejecución impecable',
+                iconUrl: '',
+            },
+            {
+                icon: 'icon-mejora.png',
+                iconAlt: 'Mejora continua',
+                iconUrl: '',
+            },
+        ]
+
+    section.bg-default.quienes-somos
+        article.wrap-lg.nosotros
+            .nosotros__item.animate__animated.animate__fadeInUp
+                img(src=`${pathImg}acerca-de-nosotros.png` alt="Acerca de nosotros")
+            .nosotros__item.animate__animated.animate__fadeInUp
+                h2.blanco.t3 Acerca de nosotros
+                p.blanco.t6 Contamos con una experiencia de más de veinte años en diversos negocios y sectores, donde nos hemos convertido en elemento clave para el crecimiento ordenado y controlado de nuestros clientes.<br><br>
+                p.blanco.t6 A través del uso de tecnología de vanguardia, y un compromiso y cercanía tangible con nuestros clientes, ofrecemos la tranquilidad de que sus procesos y controles están operando de la mejor manera para apoyar el crecimiento del negocio.<br><br>
+                p.blanco.t6 Nos caracteriza ir más allá de lo esperado, con la agilidad y visión integral frente a los retos que afrontamos.
+        article.wrap-xs.valores
+            h2.blanco.t3.text-ac Nuestros valores y comportamientos
+            p.blanco.t6.text-ac En Ferrer & Asociados nos conducimos y creemos firmemente en los valores y cualidades que nos guían en nuestro día a día.
+            ul.lista-valores
+                each item in VALORES
+                    li
+                        img(src=`${pathImg}${item.icon}` alt=`${item.iconAlt}`)
+                        p.blanco.t6 !{`${item.iconAlt}`}
+    
+    section.liderazgo
+        h2.blanco.t3.text-ac Liderazgo
+        article.wrap-xs
+            div: img(src=`${pathImg}foto-javier-ferrer-baez.png` alt="Foto Javier Ferrer Báez")
+            p.blanco.t6 Nuestro Socio Líder, Javier Ferrer Báez, cuenta con toda la experiencia y capacidad que le han aportado más de 30 años de trayectoria profesional. Su visión integral de los negocios está garantizada por su vasta experiencia como Director General de auditoría interna, perfectamente complementada por haber asumido retos de la más alta responsabilidad en la gestión y operación de negocios.<br><br>El apego a los valores, el pensamiento disruptivo, hacer las cosas diferentes para obtener mejores resultados e innovar constantemente son rasgos que lo definen y ha sabido transmitir a la forma en como hacemos nuestro trabajo en Ferrer & Asociados.
+					 

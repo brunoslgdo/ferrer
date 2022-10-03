@@ -1,0 +1,15 @@
+$colors: (
+    azul: #00BBFF,
+    rojo: #FF0C4A,
+    blanco: #FFFFFF,
+    negro: #000000,
+    default: #032531
+);
+
+:root {
+    
+    @each $key, $var in $colors {
+
+        --#{$key}: #{$var};
+    }
+}

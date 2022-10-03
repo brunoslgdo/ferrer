@@ -1,0 +1,70 @@
+extend ../templates/main
+block content
+
+    section.bg-default.subheader
+        article.wrap-sm
+            h1.blanco.t1.text-ac.animate__animated.animate__fadeInUp Sectores
+            p.blanco.t4.text-ac.animate__animated.animate__fadeInUp Tenemos amplia experiencia en los siguientes sectores:
+
+    -
+        const SECTORES = [
+            {
+                thumb: 'sectores-1.png',
+                thumbAlt: 'Retail',
+                thumbUrl: '',
+            },
+            {
+                thumb: 'sectores-2.png',
+                thumbAlt: 'Telecomunicaciones',
+                thumbUrl: '',
+            },
+            {
+                thumb: 'sectores-3.png',
+                thumbAlt: 'Financiero',
+                thumbUrl: '',
+            },
+            {
+                thumb: 'sectores-4.png',
+                thumbAlt: 'Entretenimiento',
+                thumbUrl: '',
+            },
+            {
+                thumb: 'sectores-5.png',
+                thumbAlt: 'Energía y minería',
+                thumbUrl: '',
+            },
+            {
+                thumb: 'sectores-6.png',
+                thumbAlt: 'Inmobiliario',
+                thumbUrl: '',
+            },
+            {
+                thumb: 'sectores-7.png',
+                thumbAlt: 'Manufactura',
+                thumbUrl: '',
+            },
+            {
+                thumb: 'sectores-8.png',
+                thumbAlt: 'Automotriz',
+                thumbUrl: '',
+            },
+            {
+                thumb: 'sectores-9.png',
+                thumbAlt: 'Marketing',
+                thumbUrl: '',
+            },
+            {
+                thumb: 'sectores-10.png',
+                thumbAlt: 'Acción social',
+                thumbUrl: '',
+            },
+        ]
+
+    section.bg-default.sectores
+        article.wrap-lg
+            ul.lista-sectores.animate__animated.animate__fadeInUp
+                each item in SECTORES 
+                    li  
+                        img(src=`${pathImg}${item.thumb}` alt=`${item.thumbAlt}`)
+                        p.blanco.t4 !{`${item.thumbAlt}`}
+            h3.blanco.t4.text-ac Desarrollamos nuevos enfoques para otros negocios
