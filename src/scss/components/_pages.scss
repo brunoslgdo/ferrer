@@ -244,33 +244,45 @@
 
 .servicios-soluciones {
     padding-bottom: var(--su-96);
+
+    h3 {
+        color: var(--blanco);
+        font-size: var(--t3);
+        text-align: center;
+        margin-bottom: calc(var(--t3) * 1.125);
+    }
 }
 
 .lista-consultoria {
     list-style-type: none;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: var(--su-16);
-    padding-bottom: toRem(160px);
+    // padding-bottom: toRem(160px);
 
     &__item {
         border: toRem(1px) solid var(--blanco);
         border-radius: var(--su-8);
         padding: var(--su-24);
         margin-bottom: var(--su-32);
-        flex: 1;
+        flex-basis: toRem(272px);
         position: relative;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        &::after {
-            content: '▼';
-            color: var(--blanco);
-            font-size: var(--su-32);
-            position: absolute;
-            left: 50%;
-            bottom: toRem(-36px);
-            transform-origin: top;
-            transform: scale(0) translateX(-50%);
-        }
+        // &::after {
+        //     content: '▼';
+        //     color: var(--blanco);
+        //     font-size: var(--su-32);
+        //     position: absolute;
+        //     left: 50%;
+        //     bottom: toRem(-36px);
+        //     transform-origin: top;
+        //     transform: scale(0) translateX(-50%);
+        // }
 
         // cinco
         &:nth-child(1) .lista-consultoria__servicios.cinco { 

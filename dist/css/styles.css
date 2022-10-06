@@ -874,31 +874,31 @@ body {
 .servicios-soluciones {
   padding-bottom: var(--su-96);
 }
+.servicios-soluciones h3 {
+  color: var(--blanco);
+  font-size: var(--t3);
+  text-align: center;
+  margin-bottom: calc(var(--t3) * 1.125);
+}
 
 .lista-consultoria {
   list-style-type: none;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: var(--su-16);
-  padding-bottom: 10rem;
 }
 .lista-consultoria__item {
   border: 0.0625rem solid var(--blanco);
   border-radius: var(--su-8);
   padding: var(--su-24);
   margin-bottom: var(--su-32);
-  flex: 1;
+  flex-basis: 17rem;
   position: relative;
   cursor: pointer;
-}
-.lista-consultoria__item::after {
-  content: "▼";
-  color: var(--blanco);
-  font-size: var(--su-32);
-  position: absolute;
-  left: 50%;
-  bottom: -2.25rem;
-  transform-origin: top;
-  transform: scale(0) translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .lista-consultoria__item:nth-child(1) .lista-consultoria__servicios.cinco {
   min-width: 500%;
