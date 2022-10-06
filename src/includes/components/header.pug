@@ -1,3 +1,22 @@
+-
+    const SOCIALS = [
+        {
+            iconImg: 'icon-twitter.png',
+            iconAlt: 'twitter',
+            iconUrl: '#',
+        },
+        {
+            iconImg: 'icon-linkedin.png',
+            iconAlt: 'linkedin',
+            iconUrl: 'https://es.linkedin.com/company/ferrer-&-asociados',
+        },
+        {
+            iconImg: 'icon-email.png',
+            iconAlt: 'email',
+            iconUrl: 'mailto:fyarrss@ferreryasociados.mx',
+        },
+    ]
+
 header.header
     navbar.wrap-xl
         a(href="index.html" rel="noopener") 
@@ -9,3 +28,8 @@ header.header
         ul.menu-list
             each item in MENU_ITEMS
                 li.animate__animated.animate__fadeInUp: a(href=`${item.itemUrl}` rel="nooeper") !{`${item.item}`}
+ul.contacto-list
+    each item in SOCIALS
+        li
+            a(href=`${item.iconUrl}` rel="noopener" target="_blank") 
+                img(src=`${pathImg}${item.iconImg}` alt=`${item.iconAlt}`)

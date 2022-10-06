@@ -301,6 +301,35 @@ body {
   opacity: 0.64;
 }
 
+.contacto-list {
+  list-style: none;
+  position: fixed;
+  top: 50%;
+  right: var(--su-16);
+  transform: translateY(-50%);
+  z-index: 9999;
+}
+.contacto-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--azul);
+  border-radius: 50%;
+  width: var(--su-40);
+  height: var(--su-40);
+  padding: var(--su-8);
+  margin-bottom: var(--su-16);
+  cursor: pointer;
+}
+.contacto-list a {
+  margin: 0;
+  padding: 0;
+}
+.contacto-list img {
+  width: 100%;
+  display: block;
+}
+
 .subheader {
   background: url("../img/bg-subheader.jpg");
   padding-top: calc(var(--su-80) * 2 + var(--su-64));
@@ -309,7 +338,11 @@ body {
 
 .footer {
   position: relative;
-  height: 15rem;
+  height: 10rem;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer img {
   position: absolute;
@@ -322,6 +355,14 @@ body {
   right: 0;
   bottom: 0;
   width: 25rem;
+}
+.footer .wrap-xl {
+  width: 100%;
+  text-align: center;
+}
+.footer .wrap-xl a {
+  color: var(--blanco);
+  text-decoration: underline;
 }
 
 .boton {
@@ -417,6 +458,7 @@ body {
     padding-right: 0;
     padding-left: 0;
     grid-column: 16/span 9;
+    margin-bottom: auto;
     margin-top: auto;
   }
 }

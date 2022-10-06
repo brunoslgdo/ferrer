@@ -162,6 +162,38 @@
     }
 }
 
+.contacto-list {
+    list-style: none;
+    position: fixed;
+    top: 50%;
+    right: var(--su-16);
+    transform: translateY(-50%);
+    z-index: 9999;
+
+    li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--azul);
+        border-radius: 50%;
+        width: var(--su-40);
+        height: var(--su-40);
+        padding: var(--su-8);
+        margin-bottom: var(--su-16);
+        cursor: pointer;
+    }
+
+    a {
+        margin: 0;
+        padding: 0;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+
 // SUBHEADER
 
 .subheader {

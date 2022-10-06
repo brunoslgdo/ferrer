@@ -1,7 +1,11 @@
 .footer {
     position: relative;
-    height: toRem(240px);
-
+    height: toRem(160px);
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     img {
         position: absolute;
     }
@@ -15,5 +19,15 @@
         right: 0;
         bottom: 0;
         width: toRem(400px);
+    }
+    
+    .wrap-xl {
+        width: 100%;
+        text-align: center;
+
+        a {
+            color: var(--blanco);
+            text-decoration: underline;
+        }
     }
 }
