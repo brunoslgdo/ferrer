@@ -12,7 +12,9 @@ block content
         section.bg-default.videos
             article.wrap-xs.videos__wrap
                 .videos__item
-                    img(src=`${pathImg}thumb-video.png` alt="Miniatura videos")
+                    video(controls)
+                        source(srcset=`${pathVideo}ferrer-y-asociados.mp4`, type="video/mp4") 
+                    //- img(src=`${pathImg}thumb-video.png` alt="Miniatura videos")
                 .videos__item
                     h2.azul.t4 Ferrer & Asociados
                     h3.rojo.t5 Procesos

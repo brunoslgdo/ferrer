@@ -760,6 +760,11 @@ body {
   grid-template-rows: repeat(2, auto);
   gap: var(--su-32);
 }
+@media only screen and (min-width: 768px) {
+  .liderazgo .wrap-xs {
+    grid-template-columns: repeat(2, auto);
+  }
+}
 .liderazgo h2 {
   margin-bottom: var(--su-32);
 }
