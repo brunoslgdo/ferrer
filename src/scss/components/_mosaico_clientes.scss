@@ -1,5 +1,4 @@
 .mosaico-clientes {
-    background-color: var(--blanco);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -9,12 +8,31 @@
     padding: var(--su-48) var(--su-24);
     border-radius: var(--su-16);
 
+    &__box-icon {
+        background-color: var(--blanco);
+        border-radius: 50%;
+        width: calc(var(--su-96) + var(--su-32));
+        height: calc(var(--su-96) + var(--su-32));
+        position: relative;
+    }
+    
+    h3 {
+        color: var(--blanco);
+        font-size: var(--t6);
+        font-weight: normal;
+        text-align: center;
+        margin-top: var(--t7);
+        opacity: .72;
+    }
+
     img {
         display:  block;
-        max-width: toRem(120px);
+        padding: var(--su-24);
+
+        position: absolute;
+        max-width: 100%;
         
-        @media only screen and (min-width: 1024px) {
-            max-width: toRem(140px);
-        }
+        top: 50%;
+        transform: translateY(-50%);
     }
 }

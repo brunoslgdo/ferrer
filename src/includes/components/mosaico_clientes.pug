@@ -1,13 +1,8 @@
 -
     const CLIENTES = [
         {
-            logo: 'logo-presta-prenda.png',
-            logoAlt: 'Presta prenda',
-            logoUrl: '',
-        },
-        {
-            logo: 'logo-total-play.png',
-            logoAlt: 'Total play',
+            logo: 'logo-italika.png',
+            logoAlt: 'Italika',
             logoUrl: '',
         },
         {
@@ -16,28 +11,13 @@
             logoUrl: '',
         },
         {
-            logo: 'logo-italika.png',
-            logoAlt: 'Italika',
+            logo: 'logo-grupo-elektra.png',
+            logoAlt: 'Elektra',
             logoUrl: '',
         },
         {
-            logo: 'logo-grupo-dragon.png',
-            logoAlt: 'Grupo dragón',
-            logoUrl: '',
-        },
-        {
-            logo: 'logo-circulo-de-credito.png',
-            logoAlt: 'Círculo de crédito',
-            logoUrl: '',
-        },
-        {
-            logo: 'logo-fundacion-azteca.png',
-            logoAlt: 'Fundación azteca de grupo salinas',
-            logoUrl: '',
-        },
-        {
-            logo: 'logo-pe.png',
-            logoAlt: 'Pe',
+            logo: 'logo-total-play.png',
+            logoAlt: 'Total play',
             logoUrl: '',
         },
         {
@@ -49,4 +29,7 @@
 
 ul.mosaico-clientes.wrap-sm
     each item in CLIENTES
-        li.animate__animated.animate__fadeInUp: img(src=`${pathImg}${item.logo}` alt=`${item.logoAlt}`)
+        li.animate__animated.animate__fadeInUp
+            .mosaico-clientes__box-icon
+                img(src=`${pathImg}${item.logo}` alt=`${item.logoAlt}`)
+            h3 !{`${item.logoAlt}`} 

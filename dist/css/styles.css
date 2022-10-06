@@ -580,7 +580,6 @@ body {
 }
 
 .mosaico-clientes {
-  background-color: var(--blanco);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -590,14 +589,28 @@ body {
   padding: var(--su-48) var(--su-24);
   border-radius: var(--su-16);
 }
+.mosaico-clientes__box-icon {
+  background-color: var(--blanco);
+  border-radius: 50%;
+  width: calc(var(--su-96) + var(--su-32));
+  height: calc(var(--su-96) + var(--su-32));
+  position: relative;
+}
+.mosaico-clientes h3 {
+  color: var(--blanco);
+  font-size: var(--t6);
+  font-weight: normal;
+  text-align: center;
+  margin-top: var(--t7);
+  opacity: 0.72;
+}
 .mosaico-clientes img {
   display: block;
-  max-width: 7.5rem;
-}
-@media only screen and (min-width: 1024px) {
-  .mosaico-clientes img {
-    max-width: 8.75rem;
-  }
+  padding: var(--su-24);
+  position: absolute;
+  max-width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .sectores h3 {
