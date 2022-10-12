@@ -1,12 +1,17 @@
 // HERO BANNER ------
 
 .hero-banner {
-    background: url('../img/hero-banner.jpg');
+    background-image: url('../img/hero-banner.jpg');
     background-repeat: no-repeat;
-    background-position: 30% top;
+    background-position: center center;
     background-size: auto toRem(768px);
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     position: relative;
     height: toRem(768px);
+
+    animation: heroSlide 8s linear infinite alternate-reverse;
+    animation-timing-function: ease-in-out; 
     
     @media only screen and (min-width: 1024px) {
         background-size: cover;
@@ -39,6 +44,19 @@
         @media only screen and (min-width: 1024px) {
             display: inline;
         }
+    }
+}
+
+@keyframes heroSlide {
+    0% {
+        background-image: url('../img/hero-banner.jpg');
+    }
+    50% {
+        background-image: url('../img/hero-banner-back-1.png');
+    }
+    
+    100%{
+        background-image: url('../img/hero-banner-back-2.png');
     }
 }
 

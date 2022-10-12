@@ -379,6 +379,132 @@
     }
 }
 
+.lista-procesos {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: var(--su-16);
+    padding-bottom: var(--su-80);
+
+    &__item {
+        border: toRem(1px) solid var(--blanco);
+        border-radius: var(--su-8);
+        padding: var(--su-24);
+        margin-bottom: var(--su-32);
+        flex-basis: toRem(272px);
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &::after {
+            content: '▼';
+            color: var(--blanco);
+            font-size: var(--su-32);
+            position: absolute;
+            left: 50%;
+            bottom: toRem(-36px);
+            transform-origin: top;
+            transform: scale(0) translateX(-50%);
+        }
+
+        // cinco
+        &:nth-child(1) .lista-procesos__servicios.cinco { 
+            min-width: 500%;
+             
+        }
+        &:nth-child(2) .lista-procesos__servicios.cinco { 
+            left: 0;
+            min-width: 120%;
+        }
+        &:nth-child(3) .lista-procesos__servicios.cinco { 
+            left: -200%;
+            min-width: 500%;
+            
+        }
+        &:nth-child(4) .lista-procesos__servicios.cinco { 
+            left: -120%;
+            min-width: 300%;
+             
+        }
+        &:nth-child(5) .lista-procesos__servicios.cinco { 
+            left: -200%;
+            min-width: 300%;
+        }
+        
+        // cuatro
+        &:nth-child(1) .lista-procesos__servicios.cuatro { 
+            min-width: 400%;
+             
+        }
+        &:nth-child(2) .lista-procesos__servicios.cuatro { 
+            left: -100%;
+            min-width: 400%;
+        }
+        &:nth-child(3) .lista-procesos__servicios.cuatro { 
+            left: -200%;
+            min-width: 400%;
+            
+        }
+        &:nth-child(4) .lista-procesos__servicios.cuatro { 
+            left: -300%;
+            min-width: 400%;
+             
+        }
+
+        &:hover {
+            background-color: var(--blanco);
+
+            .blanco {
+                color: var(--default);
+            }
+
+            .lista-procesos__separador {
+                background-color: var(--default);
+            }
+
+            .lista-procesos__servicios {
+                transform: scaleY(1);
+            }
+
+            &::after {
+                transform: scale(1) translateX(-50%);
+            }
+        }
+    }
+
+    &__separador {
+        background-color: var(--blanco);
+        border-style: none;
+        height: toRem(1px);
+        max-width: var(--su-64);
+        margin: var(--su-16) auto;
+    }
+
+    &__servicios {
+        background-color: var(--blanco);
+        border-radius: var(--su-16);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--su-32);
+        
+        padding: var(--su-32);
+        
+        position: absolute;
+        top: calc(100% + var(--su-32));
+        left: toRem(0px);
+        
+        min-width: toRem(1024px);
+
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+}
+
 // SLIDER
 
 .mySlides {
@@ -394,7 +520,7 @@
 .dots {
     position: absolute;
     top: toRem(320px);
-    right: var(--su-80);
+    left: calc(50% + toRem(160px));
 }
 
 .dot {

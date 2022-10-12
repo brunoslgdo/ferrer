@@ -1,6 +1,10 @@
 html {
     box-sizing: border-box;
     font-size: 100%;
+    
+    @media only screen and (min-width: 1024px) {
+        font-size: 112.5%;
+    }
 }
 
 *, *::after, *::before {
