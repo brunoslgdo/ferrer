@@ -6,14 +6,13 @@ block content
         section.bg-default.hero-banner
             article.wrap-sm
                 h1.blanco.t1.animate__animated.animate__fadeInUp “Hechos para hacerte crecer”
-                .animate__animated.animate__fadeInUp
-                    a(href="#" rel="noopener" target="_blank" class="boton boton--ghost") Análisis
+                //- .animate__animated.animate__fadeInUp
+                //-     a(href="#" rel="noopener" target="_blank" class="boton boton--ghost") Análisis
 
         section.bg-default.videos
             article.wrap-xs.videos__wrap
                 .videos__item
-                    video(controls width="100%")
-                        source(src=`http://tolkogroup.com/usuario/ferrer/video/ferrer-y-asociados.mp4` type="video/mp4") 
+                    video(controls width="100%" src=`http://tolkogroup.com/usuario/ferrer/video/ferrer-y-asociados.mp4` type="video/mp4")
                     //- img(src=`${pathImg}thumb-video.png` alt="Miniatura videos")
                 .videos__item
                     h2.azul.t4 Ferrer & Asociados
@@ -37,3 +36,10 @@ block content
         //-             li.t6.bg-blanco
         //-                 img(src=`${pathImg}testimonio-persona-3.png`, alt="Foto cliente testimonio")
         //-                 p.negro.t6 Pellentesque tristique, diam ac blandit congue, mi purus aliquet lectus, sed eleifend urna nulla eu metus. Nulla libero turpis, luctus et laoreet sit amet, rutrum eu est. Pellentesque nec auctor felis, ac aliquet leo.<br><br>Pellentesque tristique<br><span class="azul">Pellentesque tristique diam ac</span>
+    
+    block scripts
+        
+        script.
+
+            const video = document.querySelector('video');
+            const bufferedTimeRanges = video.buffered;
