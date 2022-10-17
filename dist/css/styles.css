@@ -338,7 +338,7 @@ body {
 .subheader {
   background: url("../img/bg-subheader.jpg");
   background-repeat: no-repeat;
-  padding-top: calc(var(--su-80) * 2 + var(--su-64));
+  padding-top: calc(var(--su-80) + var(--su-64));
   margin-bottom: 0;
 }
 .subheader__title {
