@@ -68,46 +68,50 @@ block content
                 itemTitulo: 'Implementar área AI',
                 itemDescripcion: 'Creamos dentro de tu empresa equipos especializados en auditoría enfocada en la prevención.',
                 itemServicios: [
-                    'Experiencia acumulada y probada en el desarrollo de equipos ágiles',
-                    'Analizar la situación e identificar las necesidades',
-                    'Implementar un proceso dinámico y efectivo',
-                    'Apoyar el proceso en tecnología de punta',
-                    'Documentar el flujo de trabajo',
+                    '● Experiencia acumulada y probada en el desarrollo de equipos ágiles',
+                    '● Analizar la situación e identificar las necesidades',
+                    '● Implementar un proceso dinámico y efectivo',
+                    '● Apoyar el proceso en tecnología de punta',
+                    '● Documentar el flujo de trabajo',
                 ],
+                itemTarget: 'prevencion1',
             },
             {
                 itemTitulo: 'Controles y procesos',
                 itemDescripcion: 'Validamos efectividad de  controles y cumplimiento de procesos y políticas.',
                 itemServicios: [
-                    'Amplia experiencia en revisiones integrales de procesos y la gestión de los negocios',
-                    'Analizar la situación e identificar desviaciones y áreas de mejora', 
-                    'Enfoque a prevenir que se repitan situaciones indeseadas',
-                    'Uso de herramientas tecnológicas de punta',
-                    'Recomendar acciones y mejoras en los procesos',
-                    'Comunicación clara y en tiempo a todos los niveles', 
-                    'Dar seguimiento puntual a la ejecución de las acciones',
+                    '● Amplia experiencia en revisiones integrales de procesos y la gestión de los negocios',
+                    '● Analizar la situación e identificar desviaciones y áreas de mejora', 
+                    '● Enfoque a prevenir que se repitan situaciones indeseadas',
+                    '● Uso de herramientas tecnológicas de punta',
+                    '● Recomendar acciones y mejoras en los procesos',
+                    '● Comunicación clara y en tiempo a todos los niveles', 
+                    '● Dar seguimiento puntual a la ejecución de las acciones',
                 ],
+                itemTarget: 'prevencion2',
             },
             {
                 itemTitulo: 'Control de inventarios',
                 itemDescripcion: 'Realizamos levantamiento de inventarios físicos en todo el país, analizando la gestión operativa de las existencias.',
                 itemServicios: [
-                    'Entender la necesidad',
-                    'Proceso adaptado a la operación',
-                    'Uso de herramientas tecnológicas',
-                    'Recomendar acciones y mejoras', 
-                    'Asesoramiento en al gestión',
+                    '● Entender la necesidad',
+                    '● Proceso adaptado a la operación',
+                    '● Uso de herramientas tecnológicas',
+                    '● Recomendar acciones y mejoras', 
+                    '● Asesoramiento en al gestión',
                 ],
+                itemTarget: 'prevencion3',
             },
             {
                 itemTitulo: 'Proyectos especiales',
                 itemDescripcion: 'Ejecutamos revisiones con propósitos específicos de acuerdo a tus necesidades.',
                 itemServicios: [
-                    'Expertise en la atención de este tipo de necesidades',
-                    'Entender bien lo que se requiere y ejecutar en consecuencia',
-                    'Comunicación en tiempo y forma',
-                    'Adaptar los entregables de acuerdo a la necesidad',
+                    '● Expertise en la atención de este tipo de necesidades',
+                    '● Entender bien lo que se requiere y ejecutar en consecuencia',
+                    '● Comunicación en tiempo y forma',
+                    '● Adaptar los entregables de acuerdo a la necesidad',
                 ],
+                itemTarget: 'prevencion4',
             },
             {
                 itemTitulo: 'Normativas (Banca)',
@@ -115,6 +119,7 @@ block content
                 itemServicios: [
                     'Dinos qué necesitas y buscaremos la mejor solución para tu negocio basados en nuestra experiencia y tecnología.'
                 ],
+                itemTarget: 'prevencion5',
             },
             {
                 itemTitulo: 'Forense',
@@ -122,25 +127,28 @@ block content
                 itemServicios: [
                     'Dinos qué necesitas y buscaremos la mejor solución para tu negocio basados en nuestra experiencia y tecnología.'
                 ],
+                itemTarget: 'prevencion6',
             },
             {
                 itemTitulo: 'Redes Sociales',
                 itemDescripcion: 'Monitoreamos tus RRSS: respuesta oportuna, control de ataques a la reputación, atención de denuncias, etc.',
                 itemServicios: [
-                    'Monitorear y controlar la interacción de las redes sociales de tu negocio',
-                    'Identificar quejas y entradas que puedan afectar la reputación',
-                    'Comunicación en tiempo y forma',
-                    'Adaptar el monitoreo y reporte a tus necesidades',
+                    '● Monitorear y controlar la interacción de las redes sociales de tu negocio',
+                    '● Identificar quejas y entradas que puedan afectar la reputación',
+                    '● Comunicación en tiempo y forma',
+                    '● Adaptar el monitoreo y reporte a tus necesidades',
                 ],
+                itemTarget: 'prevencion7',
             },
             {
                 itemTitulo: 'Atención línea ética',
                 itemDescripcion: 'Implementamos, administramos e investigamos las denuncias de la línea ética.',
                 itemServicios: [
-                    'Experiencia en el tratamiento de casos complejos y sensibles con la mayor confidencialidad y cuidado para las partes involucradas',
-                    'Proceso desarrollado y mejorado por años de experiencia en el manejo de líneas éticas',
-                    'Uso de herramientas tecnológicas y canales que facilitan el funcionamiento de la línea ética',
+                    '● Experiencia en el tratamiento de casos complejos y sensibles con la mayor confidencialidad y cuidado para las partes involucradas',
+                    '● Proceso desarrollado y mejorado por años de experiencia en el manejo de líneas éticas',
+                    '● Uso de herramientas tecnológicas y canales que facilitan el funcionamiento de la línea ética',
                 ],
+                itemTarget: 'prevencion8',
             },
         ]
 
@@ -174,44 +182,30 @@ block content
                     h2.blanco.t3 Consultoría de Prevención y Auditoría Interna
                     p.blanco.t6 Cuidamos las operaciones de tu negocio para que tú te dediques a lo importante: crecer y ganar.
             article.wrap-lg.servicios-soluciones
-                ul.lista-procesos
+                .lista-procesos-alt
                     each item, key in CONSULTORIA_PREVEENCION
                         if key < 4
-                            li.lista-procesos__item
+                            a(class="lista-procesos-alt__item" href=`#${item.itemTarget}`) 
                                 h3.blanco.t5.text-ac !{`${item.itemTitulo}`}
-                                hr.lista-procesos__separador
+                                hr.lista-procesos-alt__separador
                                 p.blanco.t6.text-ac !{`${item.itemDescripcion}`}
-                ul.lista-procesos
+                .lista-procesos-alt
                     each item, key in CONSULTORIA_PREVEENCION
                         if key > 3
-                            li.lista-procesos__item
+                            a(class="lista-procesos-alt__item" href=`#${item.itemTarget}`) 
                                 h3.blanco.t5.text-ac !{`${item.itemTitulo}`}
-                                hr.lista-procesos__separador
+                                hr.lista-procesos-alt__separador
                                 p.blanco.t6.text-ac !{`${item.itemDescripcion}`}
         
-        .lista-procesos__servicios-alt
-            each servicio in item.itemServicios
-                p.default.t6.text-ac !{`${servicio}`}
+        each item in CONSULTORIA_PREVEENCION
+            div(class="lista-procesos-modal-open" id=`${item.itemTarget}`)
+                .lista-procesos-modal-open__box
+                    h3.default.t4 !{`${item.itemTitulo}`}
+                    h4.default.t5 ¿Qué ofrecemos?
+                    each servicios in item.itemServicios
+                        p.default.t6 !{`${servicios}`}
+                    a(href="#" class="lista-procesos-modal-open__cerrar")
 
-        //- each item in SERVICIOS
-        //-     .mySlides.fade.animate__animated.animate__fadeInRightBig
-        //-         article.wrap-lg.procesos
-        //-             .procesos__item
-        //-                 img(src=`${pathImg}${item.servicioThumb}` alt=`${item.servicioTitulo}`)
-        //-             .procesos__item
-        //-                 h2.blanco.t3 !{`${item.servicioTitulo}`}
-        //-                 p.blanco.t6 !{`${item.servicioDescripcion}`}
-        //-         article.wrap-lg.servicios-soluciones
-        //-             h3 ¿Qué ofrecemos?
-        //-             ul.lista-consultoria
-        //-                 each categoria in item.servicioCategorias
-        //-                     li.lista-consultoria__item
-        //-                         p.blanco.t5.text-ac !{`${categoria}`}
-                                //- hr.lista-consultoria__separador
-                                //- p.blanco.t6.text-ac !{`${item.itemDescripcion}`}
-                                //- .lista-consultoria__servicios.cinco
-                                //-     each servicio in item.itemServicios
-                                //-         p.default.t6.text-ac !{`${servicio}`}
         .dots
             span(class="dot" onclick="currentSlide(1)") 
             span(class="dot" onclick="currentSlide(2)") 
