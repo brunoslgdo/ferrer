@@ -65,8 +65,8 @@ block content
 
         const CONSULTORIA_PREVEENCION = [
             {
-                itemTitulo: 'Implementar área AI',
-                itemDescripcion: 'Creamos dentro de tu empresa equipos especializados en auditoría enfocada en la prevención.',
+                itemTitulo: 'Implementar y mejorar la función de auditoría interna',
+                itemDescripcion: 'Creamos  soluciones de acuerdo a las necesidades de tu negocio, para formar o evolucionar al equipo de auditoría enfocado en la prevención.',
                 itemServicios: [
                     '● Experiencia acumulada y probada en el desarrollo de equipos ágiles',
                     '● Analizar la situación e identificar las necesidades',
@@ -77,8 +77,8 @@ block content
                 itemTarget: 'prevencion1',
             },
             {
-                itemTitulo: 'Controles y procesos',
-                itemDescripcion: 'Validamos efectividad de  controles y cumplimiento de procesos y políticas.',
+                itemTitulo: 'Controles, procesos y gestión',
+                itemDescripcion: 'Validamos efectividad de los controles, el cumplimiento de procesos y políticas, y la gestión de las áreas de tu negocio.',
                 itemServicios: [
                     '● Amplia experiencia en revisiones integrales de procesos y la gestión de los negocios',
                     '● Analizar la situación e identificar desviaciones y áreas de mejora', 
@@ -92,7 +92,7 @@ block content
             },
             {
                 itemTitulo: 'Control de inventarios',
-                itemDescripcion: 'Realizamos levantamiento de inventarios físicos en todo el país, analizando la gestión operativa de las existencias.',
+                itemDescripcion: 'Planeamos y realizamos el levantamiento de inventarios físicos y analizamos la gestión operativa de las existencias, así como su automatización a través de nuevas tecnologías.',
                 itemServicios: [
                     '● Entender la necesidad',
                     '● Proceso adaptado a la operación',
@@ -103,8 +103,8 @@ block content
                 itemTarget: 'prevencion3',
             },
             {
-                itemTitulo: 'Proyectos especiales',
-                itemDescripcion: 'Ejecutamos revisiones con propósitos específicos de acuerdo a tus necesidades.',
+                itemTitulo: 'Consultoría especial o dirigída ',
+                itemDescripcion: 'Ejecutamos revisiones con propósitos específicos de acuerdo a tus necesidades y asesoramos en los pasos a seguir.',
                 itemServicios: [
                     '● Expertise en la atención de este tipo de necesidades',
                     '● Entender bien lo que se requiere y ejecutar en consecuencia',
@@ -114,10 +114,13 @@ block content
                 itemTarget: 'prevencion4',
             },
             {
-                itemTitulo: 'Normativas (Banca)',
-                itemDescripcion: 'Replanteamiento de una nueva iniciativa del proceso partiendo de una propuesta “To Be”ya implementada.',
+                itemTitulo: 'Seguimiento a implementación de acciones y mejoras',
+                itemDescripcion: 'Acompañamos y controlamos que la implementación de mejoras y ejecución de acciones derivadas de auditorías se ejecuten en tiempo y forma.',
                 itemServicios: [
-                    'Dinos qué necesitas y buscaremos la mejor solución para tu negocio basados en nuestra experiencia y tecnología.'
+                    '● Entender el contexto y prioridad de las acciones y mejoras requeridas',
+                    '● Asesorar y monitorear a los responsables de la ejecución de las acciones',
+                    '● Asegurar que las desviaciones sean reportadas con anticipación ',
+                    '● Identificar y proponer mejoras en las acciones cuando aplique',
                 ],
                 itemTarget: 'prevencion5',
             },
@@ -142,7 +145,7 @@ block content
             },
             {
                 itemTitulo: 'Atención línea ética',
-                itemDescripcion: 'Implementamos, administramos e investigamos las denuncias de la línea ética.',
+                itemDescripcion: 'Implementamos, administramos e investigamos las denuncias de la línea ética',
                 itemServicios: [
                     '● Experiencia en el tratamiento de casos complejos y sensibles con la mayor confidencialidad y cuidado para las partes involucradas',
                     '● Proceso desarrollado y mejorado por años de experiencia en el manejo de líneas éticas',
@@ -186,14 +189,14 @@ block content
                     each item, key in CONSULTORIA_PREVEENCION
                         if key < 4
                             a(class="lista-procesos-alt__item" href=`#${item.itemTarget}`) 
-                                h3.blanco.t5.text-ac !{`${item.itemTitulo}`}
+                                h3.blanco.text-ac !{`${item.itemTitulo}`}
                                 hr.lista-procesos-alt__separador
                                 p.blanco.t6.text-ac !{`${item.itemDescripcion}`}
                 .lista-procesos-alt
                     each item, key in CONSULTORIA_PREVEENCION
                         if key > 3
                             a(class="lista-procesos-alt__item" href=`#${item.itemTarget}`) 
-                                h3.blanco.t5.text-ac !{`${item.itemTitulo}`}
+                                h3.blanco.text-ac !{`${item.itemTitulo}`}
                                 hr.lista-procesos-alt__separador
                                 p.blanco.t6.text-ac !{`${item.itemDescripcion}`}
         

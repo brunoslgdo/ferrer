@@ -1118,6 +1118,9 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.lista-procesos-alt__item h3 {
+  font-size: var(--su-24) !important;
+}
 .lista-procesos-alt__item:hover {
   background-color: var(--blanco);
 }

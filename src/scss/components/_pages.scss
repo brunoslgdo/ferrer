@@ -526,6 +526,10 @@
         align-items: center;
         flex-direction: column;
 
+        h3 {
+            font-size: var(--su-24) !important;
+        }
+
         &:hover {
             background-color: var(--blanco);
 
